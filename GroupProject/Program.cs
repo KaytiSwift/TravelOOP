@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GroupProject;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,8 @@ namespace TravelOOP
     {
         static void Main(string[] args)
         {
+            Travel travel = new Travel();
+            travel.TotalTravelTime(9, 18, 2018);
         }
     }
 }
