@@ -12,7 +12,7 @@ namespace TravelOOP
         static void Main(string[] args)
         {
             Travel travel = new Travel();
-            travel.TotalTravelTime(9, 18, 2018);
+            travel.TtlTravel(9, 18, 2018);
         }
     }
 }

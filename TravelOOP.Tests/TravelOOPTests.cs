@@ -56,12 +56,12 @@ namespace TravelOOP.Tests
             Assert.That(result, Is.EqualTo("9/8/2018"));
         }
 
-        [Test]
+        [Test] //originally asked to return 5 but had to change because we changed return type
         public void Test_Total_Travel_Time_Method()
         {
             var underTest = new Travel();
-            var result = underTest.TotalTravelTime(9, 13, 2018);
-            Assert.That(result, Is.EqualTo(5));
+            var result = underTest.TtlTravel(9, 13, 2018);
+            Assert.That(result, Is.EqualTo("Cali"));
         }
 
         [Test]
@@ -72,7 +72,76 @@ namespace TravelOOP.Tests
             Assert.That(result, Is.EqualTo("Cali"));
         }
 
+        [Test]
+        public void Selection_Method_4_Georgia()
+        {
+            var underTest = new Travel();
+            var result = underTest.GetSelection(4);
+            Assert.That(result, Is.EqualTo("Georgia"));
+        }
 
+        [Test]
+        public void Selection_Method_3_Florida()
+        {
+            var underTest = new Travel();
+            var result = underTest.GetSelection(3);
+            Assert.That(result, Is.EqualTo("Florida"));
+        }
 
+        [Test]
+        public void Selection_Method_2_Nashville()
+        {
+            var underTest = new Travel();
+            var result = underTest.GetSelection(2);
+            Assert.That(result, Is.EqualTo("Nashville"));
+        }
+
+        [Test]
+        public void Selection_Method_1_PutInBay()
+        {
+            var underTest = new Travel();
+            var result = underTest.GetSelection(1);
+            Assert.That(result, Is.EqualTo("Put In Bay"));
+        }
+
+        [Test]
+        public void Selection_Method_0_Stay_Home()
+        {
+            var underTest = new Travel();
+            var result = underTest.GetSelection(0);
+            Assert.That(result, Is.EqualTo("Stay Home"));
+        }
+
+        [Test]
+        public void Selection_Method_Greater_Than_5()
+        {
+            var underTest = new Travel();
+            var result = underTest.GetSelection(6);
+            Assert.That(result, Is.EqualTo("The World is Yours"));
+        }
+
+        [Test]
+        public void Selection_Method_Greater_Than_5_Destination()
+        {
+            var underTest = new Travel();
+            var result = underTest.GetSelection(6);
+            Assert.That(result, Is.EqualTo("The World is Yours"));
+        }
+
+        [Test]
+        public void Selection_Method_5_Destination_TTT_Method_Input()
+        {
+            var underTest = new Travel();
+            var result = underTest.TtlTravel(9,14,2018);
+            Assert.That(result, Is.EqualTo("The World is Yours"));
+        }
+
+        [Test]
+        public void Selection_Method_5_Destination_TTT_Method_Input2()
+        {
+            var underTest = new Travel();
+            var result = underTest.TtlTravel(9, 13, 2018);
+            Assert.That(result, Is.EqualTo("Cali"));
+        }
     }
 }

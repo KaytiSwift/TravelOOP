@@ -28,7 +28,7 @@ namespace GroupProject
             return date;
         }
 
-        public int TotalTravelTime(int month, int day, int year) //We have no idea what we are doing but we got the test to pass!!!
+        public object TtlTravel(int month, int day, int year) //We have no idea what we are doing but we got the test to pass!!!
         {
             int difference = 0;
             GetDate(9, 8, 2018);
@@ -53,13 +53,10 @@ namespace GroupProject
             if (dayOne == dayTwo)
             {
                 difference = int.Parse(split[1]) - int.Parse(Split2[1]);
-
+                
             }
-
-            return difference;
-
-
-
+            return GetSelection(difference);
+            
         }
 
         public string GetSelection(int difference)
@@ -85,7 +82,7 @@ namespace GroupProject
                     return "Cali";
 
                 case 6:
-                    return "The World is Yours.";
+                    return "The World is Yours";
 
                 default:
                     return "Error";
